@@ -1,178 +1,130 @@
 import React from 'react'
 import Count from './Count'
-import userImage from './images/bg.jpg'
-import {Link} from 'react-router-dom'
+import userImage from './images/logo.jpeg'
+import team from './images/person.jpg'
+
+import { Link } from 'react-router-dom'
+import './App.css'
 
 
 function Home() {
     return (
-        <div className="app">
-      <div id="content-wrap">
-        <main className="row">
-          <header className="site-header">
-            <div className="logo">
-              <a href="index.html">Advent.</a>
+      <div className="app">
+        <main>
+          <section className="banner">
+            <div className="info">
+              <div className="container">
+                <img src={userImage} alt="" className="logo" />
+                <div className="content">
+                  <h1>SnapKnow is coming soon</h1>
+                  <p>Welcome to Snapknow! Snap! Learn! Grow!</p>
+                  <p>
+                    The educational app that teaches everything you need to know
+                    in a fun and easy way
+                  </p>
+                  <p>
+                    You can learn about things captured with your phone camera
+                    or import from your phone gallery.
+                  </p>
+                  <p>
+                    Learning has never been so much fun, If you want to know
+                    more about an object just snap it!
+                  </p>
+                </div>
+                <div className="icons">
+                  <div className="f">
+                    <i className="icon-facebook"></i>
+                  </div>
+                  <div className="t">
+                    <i className="icon-twitter"></i>
+                  </div>
+                  <div className="p">
+                    <i className="icon-pinterest"></i>
+                  </div>
+                  <div className="b">
+                    <i className="icon-behance"></i>
+                  </div>
+                  <div className="r">
+                    <i className="icon-reddit"></i>
+                  </div>
+                </div>
+              </div>
             </div>
-          </header>
-
-          <div id="main-content" className="twelve columns">
-            <h1>Coming Soon</h1>
-
-            <p> Welcome to Snapknow! Snap! Learn! Grow!</p>
-            <p>
-              The educational app that teaches everything you need to know in a
-              fun and easy way. You can learn about things captured with your
-              phone camera or import from your phone gallery. Learning has never
-              been so much fun, If you want to know more about an object just
-              snap it!
-            </p>
-
-            <hr />
-
-            <Count />
-
-            <div id="mc-signup">
-              <form id="mc-form" className="group">
-                <input
-                  type="email"
-                  value=""
-                  name="EMAIL"
-                  className="email"
-                  id="mce-EMAIL"
-                  placeholder="email address"
-                  required
-                />
-
-                <input
-                  type="submit"
-                  value="Get Notified"
-                  name="subscribe"
-                  className="button"
-                />
-
-                <label
-                  htmlFor="mce-EMAIL"
-                  className="subscribe-message"
-                ></label>
-              </form>
+            <div className="image">
+              <Count />
             </div>
-          </div>
+          </section>
 
-          <div className="modal-toggles">
-            <ul>
-              <li className="about-us">
-                <a href="#mod-about">More about us</a>
-              </li>
-              <li className="location">
-                <a href="#mod-map">Our Location</a>
-              </li>
-            </ul>
-          </div>
+          <section className="features">
+            <div className="image"></div>
+            <div className="container">
+              <h2>Amazing Features</h2>
+              <div className="feature-box">
+                <div className="feature">
+                  <h3>Easy Set Up</h3>
+                  <p>
+                    SnapKnow App is build with an intuitive and user friendly
+                    interface
+                  </p>
+                </div>
+                <div className="feature">
+                  <h3>On The Go</h3>
+                  <p>
+                    SnapKnow can be used at a anytime and anywhere, with
+                    SnapKnmow you can learn new things while being active or
+                    busy.
+                  </p>
+                </div>
+                <div className="feature">
+                  <h3>Social Connect</h3>
+                  <p>
+                    Users can connect with each other and share the knowledge
+                    that they’ve gained amidst other social interactions .
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="team">
+            <h2>Team Members</h2>
+            <div className="container">
+              <div className="members">
+                <div className="member">
+                  <div className="image">
+                    <img src={team} alt="" />
+                  </div>
+                  <h6>Andrew Gabriel</h6>
+                </div>
+                <div className="member">
+                  <div className="image">
+                    <img src={team} alt="" />
+                  </div>
+                  <h6>Andrew Gabriel</h6>
+                </div>
+                <div className="member">
+                  <div className="image">
+                    <img src={team} alt="" />
+                  </div>
+                  <h6>Andrew Gabriel</h6>
+                </div>
+                <div className="member">
+                  <div className="image">
+                    <img src={team} alt="" />
+                  </div>
+                  <h6>Andrew Gabriel</h6>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
+        <footer>
+          <p>
+            <Link to="/policy">Terms and condition</Link>
+          </p>
+        </footer>
       </div>
-
-      <div className="features">
-        <h2>Amazing Features</h2>
-        <div className="feature-box">
-          <div className="feature">
-            <h3>Easy Set Up</h3>
-            <p>
-              SnapKnow App is build with an intuitive and user friendly
-              interface
-            </p>
-            <hr />
-          </div>
-          <div className="feature">
-            <h3>On The Go</h3>
-            <p>
-              SnapKnow can be used at a anytime and anywhere, with SnapKnmow you
-              can learn new things while being active or busy.
-            </p>
-            <hr />
-          </div>
-          <div className="feature">
-            <h3>Social Connect</h3>
-            <p>
-              Users can connect with each other and share the knowledge that t
-              hey’ve gained amidst other social interactions .
-            </p>
-            <hr />
-          </div>
-        </div>
-      </div>
-
-      <div className="features">
-        <h2>Team Members</h2>
-        <div className="feature-box">
-          <div className="feature">
-            <h3>Easy Set Up</h3>
-            <p>
-              SnapKnow App is build with an intuitive and user friendly
-              interface
-            </p>
-            <hr />
-          </div>
-          <div className="feature">
-            <h3>On The Go</h3>
-            <p>
-              SnapKnow can be used at a anytime and anywhere, with SnapKnmow you
-              can learn new things while being active or busy.
-            </p>
-            <hr />
-          </div>
-          <div className="feature">
-            <h3>Social Connect</h3>
-            <p>
-              Users can connect with each other and share the knowledge that t
-              hey’ve gained amidst other social interactions .
-            </p>
-            <hr />
-          </div>
-        </div>
-      </div>
-
-      <div className="team">
-        <h2>Team</h2>
-        <div className="team-box">
-          <div className="single-member">
-            <div className="member">
-              <img src={userImage} alt="" />
-            </div>
-            <h3>Easy Set Up</h3>
-          </div>
-          <div className="single-member">
-            <div className="member">
-              <img src={userImage} alt="" />
-            </div>
-            <h3>Easy Set Up</h3>
-          </div>
-          <div className="single-member">
-            <div className="member">
-              <img src={userImage} alt="" />
-            </div>
-            <h3>Easy Set Up</h3>
-          </div>
-          <div className="single-member">
-            <div className="member">
-              <img src={userImage} alt="" />
-            </div>
-            <h3>Easy Set Up</h3>
-          </div>
-        </div>
-      </div>
-
-      <div className="footer">
-        <p><Link to="/policy">Terms and conditions</Link></p>
-        <div>
-          <i className="fas fa-envelope"></i>
-          <i className="fas fa-rss"></i>
-          <i className="fas fa-laptop-code"></i>
-          <i className="fas fa-bolt"></i>
-        </div>
-      </div>
-
-    </div>
-    )
+    );
 }
 
 export default Home

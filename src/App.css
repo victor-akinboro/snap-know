@@ -1,38 +1,461 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFFFFF;
+    overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner {
+    width: 100vw;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.banner .info {
+    background-color: rgb(244, 244, 244);
+    flex: 1;
+    display: grid;
+    place-content: center;
+    height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.banner .logo {
+    width: 100px;
+    height: 100px;
+    margin: -50px auto 50px;
+    display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banner .image {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2) url(./images/bg.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    width: 100%;
+    height: 100vh;
+}
+
+.features .image {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2) url(./images/bg.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    width: 100%;
+}
+
+.banner h1 {
+    color: #f17442;
+    margin: 30px 0;
+    font-size: 36px;
+}
+
+.banner p {
+    color: #4d4b4b;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.banner .container {
+    padding: 1.5em;
+    width: 80%;
+    line-height: 1.5em;
+    padding-left: 2.5em;
+}
+
+.icons div {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-content: center;
+    margin: 0 10px;
+}
+
+.icons {
+    display: flex;
+    margin-top: 70px;
+}
+
+.icons div {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons .f {
+    background-color: #1778F2;
+}
+
+.icons .t {
+    background-color: #1DA1F2;
+}
+
+.icons .p {
+    background-color: #BD081C;
+}
+
+.icons .b {
+    background-color: rgb(53, 53, 247);
+}
+
+.icons .r {
+    background-color: rgb(53, 53, 247);
+}
+
+.banner .image {
+    display: grid;
+    place-content: center;
+}
+
+.banner .counter {
+    display: flex;
+}
+
+.banner .card {
+    background-color: rgb(56, 56, 56);
+    padding: 1em;
+    margin: 0 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0);
+}
+
+.features {
+    background-color: rgb(20, 20, 20);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.features .container {
+    flex: 0.40;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+}
+
+.features h2 {
+    text-align: center;
+    color: rgb(244, 111, 63);
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.features .image {
+    background-image: url(./images/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 0.60;
+    background-position: left;
+}
+
+.features .feature {
+    width: 80%;
+    margin: 10px auto;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.feature h3 {
+    margin: 10px 0;
+    color: coral;
+}
+
+.feature p {
+    margin-bottom: 50px;
+    width: 90%;
+    line-height: 1.4em;
+}
+
+.team {
+    padding: 2em 0;
+    background: rgb(32, 31, 31);
+    width: 100%;
+}
+
+.team .container {
+    display: grid;
+    place-content: center;
+}
+
+.members {
+    display: flex;
+    padding: 1.5em;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.team h2 {
+    text-align: center;
+    padding: 10px 0;
+    padding-top: 40px;
+    text-shadow: 0px 0px 8px rgb(83, 82, 82);
+    font-size: 1.8em;
+}
+
+.member {
+    width: 200px;
+    margin: 10px 20px;
+    color: black;
+    border: 5px solid #f17442;
+    overflow: hidden;
+    background-color: rgb(226, 222, 222);
+    border-radius: 4px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.member:hover,
+.icons div:hover {
+    transform: scale(1.1);
+}
+
+.member img {
+    width: 100%;
+}
+
+.member .image {
+    height: 150px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.member h6 {
+    font-size: 1.3em;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer {
+    background: rgb(8, 7, 7);
+    width: 100vw;
+    padding: 1em;
+    text-align: center;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 
+/* 03. =preloader
+/* =================================================================== */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    z-index: 9999999;
+    height: 100%;
+}
+
+.no-js #preloader,
+.oldie #preloader,
+.ie9 #preloader {
+    display: none;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    padding: 0;
+}
+
+#loader:before {
+    content: "";
+    border-top: 11px solid rgba(255, 255, 255, 0.2);
+    border-right: 11px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 11px solid rgba(255, 255, 255, 0.2);
+    border-left: 11px solid #fbca08;
+    -webkit-animation: load 1.1s infinite linear;
+    animation: load 1.1s infinite linear;
+    display: block;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+@-webkit-keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes load {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@media only screen and (max-width: 970px) {
+    .banner .container {
+        padding-top: 50px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .banner .icons {
+        margin-top: 30px;
+    }
+
+    .banner {
+        margin-bottom: 1.9em;
+    }
+}
+
+@media only screen and (max-width: 804px) {
+    .banner .icons div {
+        margin: 0 5px;
+    }
+
+    .banner {
+        margin-bottom: 0em;
+    }
+
+    .counter .card {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .banner {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 70vh 70vh;
+    }
+
+    .banner .info {
+        display: flex;
+        justify-content: center;
+        padding-top: 2em;
+    }
+
+    .banner .image {
+        height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .banner .card {
+        height: 70px;
+        width: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 504px) {
+    .banner h1 {
+        font-size: 26px;
+    }
+
+    .logo {
+        height: 70px;
+        width: 70px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width: 485px) {
+    .features {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50vh 60vh;
+        /* margin-bottom: 7em; */
+    }
+
+    .team {
+        flex-direction: column;
+        margin-top: 17.8em;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    .banner .card {
+        height: 60px;
+        width: 60px;
+    }
+
+    .banner h1 {
+        font-size: 20px;
+        margin-top: -30px;
+        margin-bottom: -10px;
+    }
+
+    .logo {
+        margin: 0;
+        padding: 0;
+    }
+
+    .icons div {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-content: center;
+        margin: 0 5px;
+    }
+
+    .banner .container {
+        width: 95%;
+    }
+
+}
+
+@media only screen and (max-width: 380px) {
+
+    .banner p {
+        line-height: 1.1em;
+    }
+
+    .banner .container {
+        padding: 1em;
+        padding-top: 3.5em;
+    }
+
+}
+
+@media only screen and (max-width: 330px) {
+    .banner .card {
+        height: 50px;
+        width: 50px;
+    }
 }

@@ -1,13 +1,15 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import './Policy.css'
+import userImage from "./images/logo.jpeg";
 
 function Policy() {
     return (
       <div>
         <nav className="back-home">
           <div className="nav-container">
-            <img src="./images/logo/SnapKnowLogo.jpeg" alt="" />
-            <Link to="/index">Home</Link>
+            <img src={userImage } alt="" />
+            <Link to="/index" style={{ color: "black", textDecoration: "none"}}>Home</Link>
           </div>
         </nav>
 
@@ -155,6 +157,11 @@ function Policy() {
             </p>
           </div>
         </section>
+        <footer>
+          <p>
+            <Link to="/index">Go Back Home</Link>
+          </p>
+        </footer>
       </div>
     );
 }

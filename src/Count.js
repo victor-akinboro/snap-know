@@ -55,21 +55,24 @@ class Example extends React.Component {
 
   render() {
     return(
-      
-        <div id="counter" className="group">
-                <span>
-                {this.state.time.d} <em>days</em>
-              </span>
-              <span>
-                {this.state.time.h} <em>hours</em>
-              </span>
-              <span>
-                    {this.state.time.m}<em>minutes</em>
-              </span>
-              <span>
-                     {this.state.time.s}<em>seconds</em>
-              </span>
-            </div>
+          <div className="counter">
+                <div className="card">
+                  <h3>{this.state.time.d}</h3>
+                  <span>days</span>
+                </div>
+                <div className="card">
+                  <h3>{this.state.time.h}</h3>
+                  <span>hours</span>
+                </div>
+                <div className="card">
+                  <h3>{this.state.time.m}</h3>
+                  <span>min</span>
+                </div>
+                <div className="card">
+                  <h3>{this.state.time.s}</h3>
+                  <span>sec</span>
+                </div>
+              </div>
 
     );
   }
